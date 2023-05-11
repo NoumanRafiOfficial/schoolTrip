@@ -1,0 +1,146 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+}
+
+/* HEAD OF ALL PAGES */
+.head {
+  text-align: center;
+  background-color: black;
+  color: #ffc107;
+  height: 20vh;
+  /* margin: 01% 0% 01% 0%; */
+  border-bottom: 1px solid #ffc107;
+  padding: 3%;
+}
+.head h1 {
+  font-size: 300%;
+}
+
+/* BODY OF ALL PAGES */
+.body {
+  font-size: x-large;
+  color: green;
+  margin: 0% 03%;
+}
+
+.nav-item {
+  margin: 0% 05% 0% 05%;
+  font-size: larger;
+}
+
+.nav-link {
+  color: black;
+  text-align: center;
+}
+
+.nav-link:hover {
+  color: #ffc107;
+  background-color: black;
+  border-radius: 12px;
+}
+@media screen and (max-width: 1200px) {
+  .nav-item {
+    margin: 0% 02% 0% 02%;
+  }
+  /* .loginButton {
+    width: 50%;
+  } */
+}
+@media screen and (max-width: 992px) {
+  .headtip {
+    display: none;
+  }
+}
+.carousel-item img {
+  height: 66vh;
+}
+/* .loginButton {
+  width: 33%;
+} */
+
+@media screen and (min-width: 768px) {
+  .loginButton {
+    width: 50%;
+  }
+}
+
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+#intro {
+  background-image: url("../src/images/intro-pic.jpg");
+  background-repeat: no-repeat;
+  width: 200%;
+  height: 100%;
+}
+
+#mission {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/src/images/mission.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100%;
+}
+#mission:hover{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/src/images/mission.jpg);
+}
+#vision {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/src/images/vision.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100%;
+}
+#vision:hover{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/src/images/vision.jpg);
+}
+#st-reg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/src/images/avatar.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100%;
+}
+#st-reg:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/src/images/avatar.jpg);
+}
+#dr-reg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/src/images/avatar2.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100%;
+}
+#dr-reg:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/src/images/avatar2.png);
+}
+
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
