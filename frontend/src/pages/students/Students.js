@@ -22,15 +22,15 @@ const Students = (props) => {
     }
     // function for deleting the Api
     const delApi = async (id) => {
-        if(!user){
+        if (!user) {
             return
         }
         // var data = 
         await fetch(`http://localhost:5000/api/students/${id}`, {
             method: "DELETE",
-            // headers: {
-            //     'Authorization': `Bearer ${user.token}`
-            // }
+            headers: {
+                'Authorization': `Bearer ${user.token}`
+            }
         })
         // data = 
         // await data.json()
@@ -45,18 +45,21 @@ const Students = (props) => {
 
     // function for editing the Api
     const editApi = async (id) => {
-        var data = await fetch(`http://localhost:5000/api/students/${id}`);
+        var data = await fetch(`http://localhost:5000/api/students/${id}`, {
+            headers: {
+                'Authorization': `Bearer ${user.token}`
+            }
+        })
         data = await data.json()
         // console.log(data)
         setHandle(data)
         navigate('/student-update')
     }
 
-
     return (
         <>
             <div className='head'>
-                <h1>All Students:</h1><hr />
+                <h1>Student Data:</h1><hr />
             </div>
             <div className='container bg-black pt-4'>
                 <div className='row'>
@@ -76,7 +79,7 @@ const Students = (props) => {
                                         <h5 className='text-dark ps-3 pb-3'><strong>{item.add}</strong></h5>
                                     </div>
                                 </div>
-                                <div className='my-3'>
+                                {/* <div className='my-3'>
                                     <button
                                         onClick={() => editApi(item._id)}
                                         style={{ width: '33.5%' }} className='btn btn-outline-warning'>
@@ -85,7 +88,7 @@ const Students = (props) => {
                                         onClick={() => delApi(item._id)}
                                         style={{ width: '66.5%' }} className='btn btn-outline-danger'>
                                         Delete</button>
-                                </div>
+                                </div> */}
                             </div>
                         ))
                     }

@@ -1,23 +1,9 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+const NewsLetter = (props) => {
+    const { info } = props
 
-const NewsLetter = () => {
-    const notify = () => {
-        toast.info("Newsletter Coming soon!"
-            , {
-                position: "top-center",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-            })
-    }
     const navigate = useNavigate()
 
     return (
@@ -32,13 +18,12 @@ const NewsLetter = () => {
                     aria-describedby="button-addon2"
                 />
                 <button
-                    onClick={() => { notify(); navigate('/#head-tip'); window.scrollTo({ top: 0, left: 0, behavior: 'smooth' }); }}
+                    onClick={() => { info('Newsletter Coming soon!'); navigate('/#head-tip'); window.scrollTo({ top: 0, left: 0, behavior: 'smooth' }); }}
                     className="btn btn-outline-warning"
                     type="button"
                     id="button-addon2">
                     Signup
                 </button>
-                <ToastContainer />
             </div>
         </div>
     )

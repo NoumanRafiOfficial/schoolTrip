@@ -1,0 +1,51 @@
+.c1 {
+  background-image: url(./images/school-drop-off-and-pick-ups-for-students-charter-school-stansbury-park-utah-bonneville-academy.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 3px solid #ffc107;
+  opacity: 0.8;
+}
+.c2 {
+  background-image: url(./images/Field-trip-bus.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 3px solid black;
+  opacity: 0.8;
+}
+.c3 {
+  background-image: url(./images/social_distancing_schoolbus.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 3px solid #ffc107;
+  opacity: 0.8;
+}
+.c4 {
+  background-image: url(./images/background-screening.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 3px solid black;
+  opacity: 0.8;
+}
+.c5 {
+  background-image: url(./images/maintenance-ccec33b5c8d1097f1036467e1e749ee7-e1585068512919.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 3px solid #ffc107;
+  opacity: 0.8;
+}
+.c6 {
+  background-image: url(./images/ezgif.com-gif-maker-2022-01-28T213519.328.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 3px solid black;
+  opacity: 0.8;
+}
+.c1:hover,
+.c2:hover,
+.c3:hover,
+.c4:hover,
+.c5:hover,
+.c6:hover {
+  opacity: 1;
+  transform: scale(1.025);
+}

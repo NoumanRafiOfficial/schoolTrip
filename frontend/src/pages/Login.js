@@ -1,19 +1,15 @@
 import { useState } from "react"
 import { useLogin } from "../hooks/useLogin"
-import { useNavigate } from "react-router-dom"
 
 const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const { login, error, isLoading } = useLogin()
 
-  const navigate = useNavigate()
-
   const handleSubmit = async (e) => {
     e.preventDefault()
 
     await login(email, password)
-    navigate('/')
   }
 
   return (
@@ -43,19 +39,11 @@ const Login = () => {
           />
 
           <button disabled={isLoading}
-            className='btn btn-outline-warning mt-5 mb-5' style={{ width: '50%' }}>
+            className='btn btn-outline-warning mt-5' style={{ width: '50%' }}>
             Log in</button>
-          {error && <div className="error">{error}</div>}
+          {error && <div className="error text-center">{error}</div>}
         </form>
-
       </div>
-
-
-
-
-
-
-
     </>
   )
 }

@@ -6,30 +6,23 @@ const Schema = mongoose.Schema
 
 // making schema for 'passenger'
 const driverSchema = new Schema({
-    // driver name
     name: {
-        type: String,
-        required: true
+        type: String, required: true
     },
-    // driver vehicle reg. number
     regNo: {
-        type: String,
-        required: true
+        type: String, required: true
     },
-    // driver phone
     number: {
-        type: Number,
-        required: true
+        type: Number, required: true
     },
-    // school name
     school: {
-        type: String,
-        required: true
+        type: String, required: true
     },
-    // school route
     route: {
-        type: String,
-        required: true
+        type: String, required: true
+    },
+    user_id: {
+        type: String, required: true, unique: true
     }
 }, { timestamps: true })
 

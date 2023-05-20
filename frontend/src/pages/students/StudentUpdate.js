@@ -1,10 +1,13 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useAuthContext } from '../../hooks/useAuthContext'
+
 
 const StudentUpdate = (props) => {
     const { handle, handler } = props
     const { name, grade, age, number, school, add, _id } = handle
 
+    const { user } = useAuthContext()
     const navigate = useNavigate()
 
     // function for updating the Api
@@ -14,6 +17,7 @@ const StudentUpdate = (props) => {
             method: 'PATCH',
             headers: {
                 "content-Type": "application/json",
+                'Authorization': `Bearer ${user.token}`
             },
             body: JSON.stringify(handle)
         })
@@ -58,14 +62,14 @@ const StudentUpdate = (props) => {
                         onChange={handler}
                         type='text' className='form-control' style={{ fontSize: '80%' }} />
 
-                    <button
+                    {/* <button
                         onClick={(e) => { e.preventDefault(); updateApi(); navigate('/students') }}
                         className='btn btn-outline-warning mt-5 mb-5' style={{ width: '50%' }}>
                         Update</button>
                     <button
                         onClick={(e) => { e.preventDefault(); alert('canceled'); navigate('/students') }}
                         className='btn btn-outline-danger mt-5 mb-5' style={{ width: '50%' }}>
-                        Cancel</button>
+                        Cancel</button> */}
                 </form><br />
             </div>
         </>

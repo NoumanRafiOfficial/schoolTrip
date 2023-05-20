@@ -28,9 +28,9 @@ const Drivers = (props) => {
     // var data = 
     await fetch(`http://localhost:5000/api/drivers/${id}`, {
       method: "DELETE",
-      // headers: {
-      //     'Authorization': `Bearer ${user.token}`
-      // }
+      headers: {
+        'Authorization': `Bearer ${user.token}`
+      }
     })
     // data = 
     // await data.json()
@@ -45,18 +45,21 @@ const Drivers = (props) => {
 
   // function for editing the Api
   const editApi = async (id) => {
-    var data = await fetch(`http://localhost:5000/api/drivers/${id}`);
+    var data = await fetch(`http://localhost:5000/api/drivers/${id}`, {
+      headers: {
+        'Authorization': `Bearer ${user.token}`
+      }
+    })
     data = await data.json()
     // console.log(data)
     setHandle2(data)
     navigate('/driver-update')
   }
 
-
   return (
     <>
       <div className='head'>
-        <h1>All Drivers:</h1><hr />
+        <h1>Driver Data:</h1><hr />
       </div>
       <div className='container bg-black pt-4'
       // text-warning text-center display-1 
@@ -79,7 +82,7 @@ const Drivers = (props) => {
                     <h5 className='text-dark ps-3 pb-3'><strong>{item.route}</strong></h5>
                   </div>
                 </div>
-                <div className='my-3'>
+                {/* <div className='my-3'>
                   <button
                     onClick={() => editApi(item._id)}
                     style={{ width: '33.5%' }} className='btn btn-outline-warning'>
@@ -88,7 +91,7 @@ const Drivers = (props) => {
                     onClick={() => delApi(item._id)}
                     style={{ width: '66.5%' }} className='btn btn-outline-danger'>
                     Delete</button>
-                </div>
+                </div> */}
               </div>
             ))
           }

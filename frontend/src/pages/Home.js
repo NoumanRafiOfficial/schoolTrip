@@ -4,7 +4,7 @@ import Carousel from '../components/homeComponents/Carousel'
 import Section02 from '../components/homeComponents/Section02'
 import Section03 from '../components/homeComponents/Section03'
 
-const Home = () => {
+const Home = (props) => {
   return (
     <>
       <div className='bg-dark'>
@@ -12,8 +12,8 @@ const Home = () => {
         <Carousel />
       </div>
       {/* <div><Section01/></div> */}
+      <div><Section03 warning={props.warning}/></div>
       <div><Section02 /></div>
-      <div><Section03 /></div>
 
       {/* <div className='body'>
         <ul>

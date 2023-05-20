@@ -5,8 +5,8 @@ const mongoose = require('mongoose')
 
 // get all drivers
 const getDrivers = async (req, res) => {
-    const drivers = await Driver.find({}).sort({ createdAt: -1 })
-
+    const user_id = req.user.id
+    const drivers = await Driver.find({ user_id }).sort({ createdAt: -1 })
     res.status(200).json(drivers)
 }
 
@@ -31,9 +31,32 @@ const getDriver = async (req, res) => {
 const createDriver = async (req, res) => {
     const { name, regNo, number, school, route } = req.body
 
+    let emptyFields = []
+
+    if (!name) {
+        emptyFields.push('name')
+    }
+    if (!regNo) {
+        emptyFields.push('regNo')
+    }
+    if (!number) {
+        emptyFields.push('number')
+    }
+    if (!school) {
+        emptyFields.push('school')
+    }
+    if (!route) {
+        emptyFields.push('route')
+    }
+    if (emptyFields.length > 0) {
+        return res.status(400).json({ error: 'Please fill in all the fields', emptyFields })
+    }
+
+
     // add to the database
     try {
-        const driver = await Driver.create({ name, regNo, number, school, route })
+        const user_id = req.user._id
+        const driver = await Driver.create({ name, regNo, number, school, route, user_id })
         res.status(200).json(driver)
     } catch (error) {
         res.status(400).json({ error: error.message })

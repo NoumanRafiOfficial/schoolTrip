@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../images/schoolTrip_logo.png'
+import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
     return (
@@ -37,7 +38,9 @@ const Navbar = () => {
                             <Link className="nav-link" to="/faq">FAQs</Link>
                         </li> */}
                         <li className="nav-item">
-                            <a className="nav-link" href="#footer-tail">Contact</a>
+                            <HashLink className="nav-link" to='#footer-tail'>Contact</HashLink>
+
+                            {/* <a className="nav-link" href="#footer-tail">Contact</a> */}
                         </li>
                         {/* <li className="nav-item dropdown">
                             <a

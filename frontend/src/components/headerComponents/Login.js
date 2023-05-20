@@ -13,7 +13,7 @@ const Login = () => {
   const handleClick = () => {
     logout()
     navigate('/')
-
+    window.scrollTo({ top: 0 })
   }
 
   // const navigate = useNavigate()

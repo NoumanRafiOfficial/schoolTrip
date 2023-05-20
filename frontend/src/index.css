@@ -93,9 +93,10 @@ div.error {
   background-size: 100% 100%;
   height: 100%;
 }
-#mission:hover{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+#mission:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(/src/images/mission.jpg);
+  transform: scale(1.025);
 }
 #vision {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -104,9 +105,10 @@ div.error {
   background-size: 100% 100%;
   height: 100%;
 }
-#vision:hover{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+#vision:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(/src/images/vision.jpg);
+  transform: scale(1.025);
 }
 #st-reg {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -116,8 +118,9 @@ div.error {
   height: 100%;
 }
 #st-reg:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(/src/images/avatar.jpg);
+  transform: scale(1.025);
 }
 #dr-reg {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -127,8 +130,21 @@ div.error {
   height: 100%;
 }
 #dr-reg:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(/src/images/avatar2.png);
+  transform: scale(1.025);
+}
+label, input {
+  display: block;
+}
+input {
+  padding: 5px;
+  /* margin-top: 5px; */
+  /* margin-bottom: 5px; */
+  width: 100%;
+  border: 2px solid #ffc107;
+  /* border-radius: 1px; */
+  box-sizing: border-box;
 }
 
 /* body {

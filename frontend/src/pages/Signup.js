@@ -38,9 +38,9 @@ const Signup = () => {
           />
 
           <button disabled={isLoading}
-            className='btn btn-outline-warning mt-5 mb-5' style={{ width: '50%' }}>
+            className='btn btn-outline-warning mt-5' style={{ width: '50%' }}>
             Sign up</button>
-          {error && <div className="error">{error}</div>}
+          {error && <div className="error text-center">{error}</div>}
         </form>
       </div>
     </>

@@ -6,9 +6,7 @@ const mongoose = require('mongoose')
 // get all students
 const getStudents = async (req, res) => {
     const user_id = req.user.id
-
     const students = await Student.find({ user_id }).sort({ createdAt: -1 })
-
     res.status(200).json(students)
 }
 
@@ -32,6 +30,30 @@ const getStudent = async (req, res) => {
 // create a new student
 const createStudent = async (req, res) => {
     const { name, grade, age, number, school, add } = req.body
+
+    let emptyFields = []
+
+    if (!name) {
+        emptyFields.push('name')
+    }
+    if (!grade) {
+        emptyFields.push('grade')
+    }
+    if (!age) {
+        emptyFields.push('age')
+    }
+    if (!number) {
+        emptyFields.push('number')
+    }
+    if (!school) {
+        emptyFields.push('school')
+    }
+    if (!add) {
+        emptyFields.push('address')
+    }
+    if (emptyFields.length > 0) {
+        return res.status(400).json({ error: 'Please fill in all the fields', emptyFields })
+    }
 
     // add to the database
     try {
